@@ -1,0 +1,65 @@
+<% layout("/layouts/bolierplate") %>
+<div class="row">
+    <div class=" col-8 offset-2">
+<body>
+    <h2>Create a new Listings</h2>
+    <br><br>
+    <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+
+        <div class="mb-3 ">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="listing[title]" placeholder="enter title" class="form-control" required>
+        <div class="valid-feedback">
+            Looks Good!
+        </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" id="" cols="2" rows="5" class="form-control" required></textarea>
+        </div>
+ 
+        
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listing[location]" placeholder="enter location" class="form-control" required>
+            <div class="invalid-feedback">
+                Give a Proper Location!
+            </div>
+        </div>
+
+        
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" name="listing[image]"  class="form-control" required>
+            <div class="invalid-feedback">
+                Give a proper image/URL
+            </div>
+        </div>
+       
+
+        <div class="row">
+        <div class="mb-3 col-4">
+            <label for="country" class="form-label">country</label>
+        <input type="text" name="listing[country]" placeholder="enter country" class="form-control" required>
+        <div class="invalid-feedback">
+            Give a Proper Country!
+        </div>
+       </div>
+        
+       <div class="mb-3 col-8" >
+        <label for="price" class="form-label">price</label>
+        <input  type="number" name="listing[price]" placeholder="enter price" class="form-control" required>
+        <div class="invalid-feedback">
+            Give a Proper Price!
+        </div>
+       </div>
+    </div>
+       
+        <button class="btn btn-danger">Add</button>
+    </form>
+    <br> <br>
+</body>
+</div>
+</div>
