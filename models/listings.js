@@ -28,6 +28,11 @@ const listingSchema = new Schema({
     owner:{
         type:Schema.Types.ObjectId,
         ref:"User",
+    },
+    caategory:{
+               type:String,
+               enum:["Rooms","Iconic Cities","Mountains" , "Castles" , "Amazing Pools" , "Camping" , "Farms" , "SnowFall Area" ],
+               require:true,
     }
 
    

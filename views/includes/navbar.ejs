@@ -1,36 +1,39 @@
-
-<nav class="navbar navbar-expand-md bg-body-light sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="/listings">Explore</a>
-        </div>
-         
-         <div class="form ms-auto">
-        <form class="d-flex" role="search">
+<nav class="navbar bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/listings/new">Create yours</a>
+          </li>
+          <% if(!currUser){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/signUp">sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Login">Log In</a>
+          </li>
+          <% } %>
+          <%  if(currUser){ %>
+          <li class="nav-item">
+            <a class="nav-link" href="/Logout">Logout</a>
+          </li>
+          <% } %>
+          
+        </ul>
+        <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-danger" type="submit">Search</button>
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-         </div>
-
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Create New</a>
-         <% if(!currUser){ %>
-          <a class="nav-link " aria-current="page" href="/signUp"><b>Sign Up</b></a>
-          <a class="nav-link" href="/Login"><b>Log In</b></a>
-         <% } %>
-         <%  if(currUser){ %>
-          <a class="nav-link" href="/Logout"><b>Log Out</b></a>
-         <%  } %>
-         
-       
-        </div>
-      
       </div>
     </div>
-
-  </nav>
+  </div>
+</nav>
