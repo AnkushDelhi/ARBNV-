@@ -76,6 +76,10 @@ body{
    
   
   }
+  .review{
+    width: 40rem  !important;
+  }
+
 }
 
  .card-img-top{
