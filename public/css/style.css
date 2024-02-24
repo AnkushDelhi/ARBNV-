@@ -64,9 +64,9 @@ body{
  
  }
  
- @media screen and (min-width: 380px) {
+ @media screen and (max-width: 400px) {
   .card img {
-   width: 20rem  !important;
+   width: 15rem  !important;
    height: 13rem !important;
   
   }
