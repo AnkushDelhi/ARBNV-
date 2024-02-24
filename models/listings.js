@@ -29,7 +29,7 @@ const listingSchema = new Schema({
         type:Schema.Types.ObjectId,
         ref:"User",
     },
-    caategory:{
+    category:{
                type:String,
                enum:["Rooms","Iconic Cities","Mountains" , "Castles" , "Amazing Pools" , "Camping" , "Farms" , "SnowFall Area" ],
                require:true,
