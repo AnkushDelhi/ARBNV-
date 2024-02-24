@@ -63,11 +63,17 @@ body{
     margin-bottom: 2rem;
  
  }
+ .card{
+  padding-left: 0 !important;
+
+ }
  
  @media screen and (max-width: 400px) {
   .card img {
-   width: 15rem  !important;
-   height: 13rem !important;
+   width: 20rem  !important;
+   height: 15rem !important;
+   margin-right: 5px !important;
+   
   
   }
 }

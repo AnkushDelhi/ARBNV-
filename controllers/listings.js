@@ -42,7 +42,8 @@ module.exports.createListing=async (req,res,next)=>{
 module.exports.editListing=async(req,res)=>{
     let {id}=req.params;
     const listing=await Listing.findById(id);
- 
+    let originalImageUrl = listing.image.url;
+   
     res.render("listings/edit.ejs",{listing , originalImageUrl});
 
 };    
