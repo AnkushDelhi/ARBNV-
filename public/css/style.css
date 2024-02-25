@@ -69,15 +69,23 @@ body{
  }
  
  @media screen and (max-width: 400px) {
-  .card img {
+  .card-1 img {
    width: 20rem  !important;
-   height: 15rem !important;
+   height: 17rem !important;
    margin-right: 5px !important;
+   border-radius: 15px !important;
    
   
   }
   .review{
     width: 40rem  !important;
+  }
+  .card img{
+    height: 17rem !important;
+   position: relative !important;
+   left: -20px !important;
+   width: 20rem !important;
+   border-radius: 15px !important;
   }
 
 }
