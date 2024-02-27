@@ -1,7 +1,9 @@
+
 const mongoose=require("mongoose");
 const initData=require("./data.js");
 const Listing=require("../models/listings.js");
-const { init } = require("passport");
+
+const DB_URL = process.env.ATLASDB_URL;
 
 
 main().then(()=>{
@@ -11,7 +13,8 @@ main().then(()=>{
 })
 
 async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/roots")
+    //await mongoose.connect("mongodb://127.0.0.1:27017/roots")
+    await mongoose.connect(DB_URL);
 }
 
 
